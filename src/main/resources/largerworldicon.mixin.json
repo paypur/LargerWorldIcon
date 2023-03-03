@@ -5,6 +5,9 @@
   "client": [
     "client.WorldListEntryMixin"
   ],
+  "server": [
+    "server.MinecraftServerMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
