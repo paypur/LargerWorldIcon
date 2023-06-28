@@ -24,7 +24,7 @@ public abstract class MinecraftServerMixin {
 
     @Final
     @Shadow
-    private static Logger LOGGER;
+    public static Logger LOGGER;
     @Final
     @Shadow
     protected LevelStorageSource.LevelStorageAccess storageSource;

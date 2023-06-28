@@ -42,7 +42,7 @@ public abstract class WorldListEntryMixin extends ObjectSelectionList.Entry<Worl
 
     /**
      * @author paypur
-     * @reason to allow larger world icons
+     * @reason
      */
 
     @Nullable
@@ -71,7 +71,7 @@ public abstract class WorldListEntryMixin extends ObjectSelectionList.Entry<Worl
                 return dynamictexture1;
             } catch (Throwable throwable2) {
                 //https://github.com/SpongePowered/Mixin/issues/594
-                WorldSelectionList.LOGGER.error("Invalid icon for world {}", this.summary.getLevelId(), throwable2);
+                WorldSelectionList.LOGGER.error("Invalid icon for world {}", this.summary .getLevelId(), throwable2);
                 this.iconFile = null;
                 return null;
             }

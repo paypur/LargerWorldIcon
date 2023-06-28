@@ -3,6 +3,7 @@
   "package": "me.paypur.largerworldicon.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "client.OnlineServerEntryMixin",
     "client.WorldListEntryMixin"
   ],
   "server": [
@@ -11,5 +12,9 @@
   "injectors": {
     "defaultRequire": 1
   },
-  "refmap": "largerworldicon.refmap.json"
+  "refmap": "largerworldicon.refmap.json",
+  "mixins": [
+    "ClientboundStatusResponsePacketMixin",
+    "FriendlyByteBufMixin"
+  ]
 }
