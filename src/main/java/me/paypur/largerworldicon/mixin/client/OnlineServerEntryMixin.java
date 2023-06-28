@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 @OnlyIn(Dist.CLIENT)
 @Mixin(ServerSelectionList.OnlineServerEntry.class)
-public class OnlineServerEntryMixin {
+public abstract class OnlineServerEntryMixin {
 
     @Final
     @Shadow
