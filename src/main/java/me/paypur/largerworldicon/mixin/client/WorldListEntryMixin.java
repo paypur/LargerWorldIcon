@@ -24,10 +24,6 @@ import java.io.InputStream;
 @Mixin(WorldSelectionList.WorldListEntry.class)
 public abstract class WorldListEntryMixin extends ObjectSelectionList.Entry<WorldSelectionList.WorldListEntry> implements AutoCloseable {
 
-//    @Final
-//    @Shadow(aliases = "f_101692_")
-//    private WorldSelectionList p_101701_;
-
     @Final
     @Shadow
     private Minecraft minecraft;
@@ -80,5 +76,4 @@ public abstract class WorldListEntryMixin extends ObjectSelectionList.Entry<Worl
             return null;
         }
     }
-
 }

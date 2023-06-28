@@ -35,6 +35,7 @@ public class OnlineServerEntryMixin {
      * @author paypur
      * @reason
      */
+
     @Overwrite
     private boolean uploadServerIcon(@Nullable String p_99897_) {
         if (p_99897_ == null) {
@@ -42,7 +43,6 @@ public class OnlineServerEntryMixin {
             if (this.icon != null && this.icon.getPixels() != null) {
                 this.icon.getPixels().close();
             }
-
             this.icon = null;
         } else {
             try {
@@ -54,16 +54,12 @@ public class OnlineServerEntryMixin {
                     this.icon.setPixels(nativeimage);
                     this.icon.upload();
                 }
-
                 this.minecraft.getTextureManager().register(this.iconLocation, this.icon);
             } catch (Throwable throwable) {
                 ServerSelectionList.LOGGER.error("Invalid icon for server {} ({})", this.serverData.name, this.serverData.ip, throwable);
                 return false;
             }
         }
-
         return true;
     }
-
-
 }

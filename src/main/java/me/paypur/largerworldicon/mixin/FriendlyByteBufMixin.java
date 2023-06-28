@@ -23,7 +23,6 @@ public abstract class FriendlyByteBufMixin {
     private int override2(int constant) {
         return NEW_STRING_LIMIT;
     }
-
     @ModifyConstant(
             method = "Lnet/minecraft/network/FriendlyByteBuf;readResourceLocation()Lnet/minecraft/resources/ResourceLocation;",
             constant = @Constant(intValue = 32767)

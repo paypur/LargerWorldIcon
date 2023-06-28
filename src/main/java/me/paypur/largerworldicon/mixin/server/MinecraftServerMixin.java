@@ -40,7 +40,6 @@ public abstract class MinecraftServerMixin {
         if (!optional.isPresent()) {
             optional = this.storageSource.getIconFile().map(Path::toFile).filter(File::isFile);
         }
-
         optional.ifPresent((p_202470_) -> {
             try {
                 BufferedImage bufferedimage = ImageIO.read(p_202470_);
@@ -52,7 +51,6 @@ public abstract class MinecraftServerMixin {
             } catch (Exception exception) {
                 LOGGER.error("Couldn't load server icon", exception);
             }
-
         });
     }
 }
